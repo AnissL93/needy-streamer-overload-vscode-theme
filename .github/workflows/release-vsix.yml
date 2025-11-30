@@ -1,32 +1,48 @@
-name: Release VSIX
+name: Build VSIX on Release Tag
 
 on:
-  release:
-    types: [created]
+  push:
+    tags:
+      - 'v*'   # Runs when you push a tag like v1.0.0, v0.3.2, etc.
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      # Checkout your code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      # Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # Install vsce
       - name: Install vsce
         run: npm install -g @vscode/vsce
 
+      # Install project dependencies
       - name: Install dependencies
         run: npm install
 
+      # Package the VS Code extension
       - name: Build VSIX
         run: vsce package
 
-      - name: Upload release asset
+      # Upload artifact to GitHub Actions page
+      - name: Upload VSIX artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vscode-extension
+          path: "*.vsix"
+
+      # Upload the VSIX to the GitHub Release
+      - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: "*.vsix"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
