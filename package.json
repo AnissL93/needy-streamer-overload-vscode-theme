@@ -1,0 +1,21 @@
+{
+  "name": "nso-theme",
+  "displayName": "NSO Theme",
+  "description": "A theme inspired by Needy Streamer Overload",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.106.1"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "nso-theme",
+        "uiTheme": "vs",
+        "path": "./themes/nso-theme-color-theme.json"
+      }
+    ]
+  }
+}
