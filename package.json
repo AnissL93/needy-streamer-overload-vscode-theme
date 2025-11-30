@@ -17,5 +17,9 @@
         "path": "./themes/nso-theme-color-theme.json"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnissL93/needy-streamer-overload-vscode-theme.git"
   }
 }
