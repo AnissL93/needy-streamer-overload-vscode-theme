@@ -1,11 +1,15 @@
 
 
-![alt text](banner.png)
+![alt text](logo.png)
 
-VSCode theme inspired by NEEDY STREAMER OVERLOAD. (Still working in progress)
+
+- VSCode theme inspired by NEEDY STREAMER OVERLOAD (https://whysoserious.jp/needy/en/).  
+- Still working in progress
 
 ## Preview
 
+
+![alt text](preview.png)
 
 ## Install
 
@@ -20,4 +24,6 @@ VSCode theme inspired by NEEDY STREAMER OVERLOAD. (Still working in progress)
 - [ ] Dark color theme
 - [ ] Fine-tune for different langauges 
 - [ ] Publish to market
+
+
 
