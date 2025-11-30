@@ -14,6 +14,7 @@
 ## Install
 
 - Install theme
+    - Download .vsix file from the release page
     - Go to extensions
     - Click the three dots, and install from VSIX 
     - Install nso-theme.0.0.1.vsix
@@ -26,4 +27,6 @@
 - [ ] Publish to market
 
 
+## Thanks
+- Gemini: For generating the images
 
